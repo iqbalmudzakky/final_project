@@ -1,3 +1,7 @@
+EXPLORATORY DATA ANAYSIS
+by: Data Magician Team
+Dataset : datatrain from (https://www.kaggle.com/datasets/reverie5/av-janata-hack-payment-default-prediction)
+
 BUSINESS INSIGHT
 Dari EDA yang telah dilakukan, dapat ditarik beberapa insight yaitu:
 1. Default rate dari bank ini masih berada di angka 22%, dimana angka ini masih tergolong tinggi (Default rate ideal bagi suatu bank adalah di bawah 5%). Masalah ini tentu perlu segera ditangani agar bank tidak mengalami kerugian yang besar, baik kerugian finansial maupun turunnya reputasi bank di mata nasabah lain maupun investor.
