@@ -1,5 +1,5 @@
-EXPLORATORY DATA ANAYSIS
-by: Data Magician Team
+EXPLORATORY DATA ANAYSIS<br>
+by: Data Magician Team<br>
 Dataset : datatrain from (https://www.kaggle.com/datasets/reverie5/av-janata-hack-payment-default-prediction)
 
 BUSINESS INSIGHT
