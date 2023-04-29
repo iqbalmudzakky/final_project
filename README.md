@@ -1,6 +1,6 @@
 EXPLORATORY DATA ANAYSIS<br>
 by: Data Magician Team<br>
-Dataset : datatrain from (https://www.kaggle.com/datasets/reverie5/av-janata-hack-payment-default-prediction)
+Dataset : data train from [[source]](https://www.kaggle.com/datasets/reverie5/av-janata-hack-payment-default-prediction)
 
 BUSINESS INSIGHT
 Dari EDA yang telah dilakukan, dapat ditarik beberapa insight yaitu:
