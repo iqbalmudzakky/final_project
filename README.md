@@ -1,4 +1,5 @@
-## EXPLORATORY DATA ANAYSIS<br>
+<p align="center"><img src="https://github.com/iqbalmudzakky/final_project/blob/main/bootcamp_notes/Bank-header.png" width=50% height=50%></p>
+<h2> EXPLORATORY DATA ANAYSIS</h2><br>
 by: Data Magician Team<br>
 Dataset : data train from [[source]](https://www.kaggle.com/datasets/reverie5/av-janata-hack-payment-default-prediction)
 
@@ -35,4 +36,28 @@ Dari EDA yang telah dilakukan, dapat ditarik beberapa insight yaitu:
 
 ### Data Modeling
 Dilakukan data modeling dengan Logistic Regression, Random Forest, XGBoost, dan Decision Tree. <br>
-Diketahui setelah melakukan cross validation, 
+Diketahui setelah melakukan cross validation, diperoleh nilai yang sudah cukup baik pada data dengan undersampling, oversampling, dan smote pada tiap algoritma model, sehingga tetap akan dilakukan testing pada tiap dataset. Dan untuk mengurangi overfit pada model, kamu juga melakukan hyperparameter tuning pada tiap algoritma model.
+Hasil di bawah merupakan hasil model dengan data train dengan performa terbaik pada tiap model.
+
+| Model  | Recall Score | Accuracy Score | Precission Score | F-1  Score | ROC AUC Score |
+| ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
+| Logistic Regression  | 62%  | 70%  | 40%  | 48%  | 72%  |
+| Random Forest  | 63%  | 74%  | 45%  | 52%  | 77%  |
+| XGBoost  | 43%  | 80%  | 56%  | 49%  | 76%  |
+| Decision Tree  | 61%  | 74%  | 44%  | 51%  | 75%  |
+
+Pada project ini, kami memfokuskan pada metrik skor Recall karena kami ingin mengurangi adanya False Negative, atau customer yang diprediksi tidak akan default payment padahal kenyataannya mengalami default payment. Dari hasil skor yang diperoleh, diketahui Algoritma model <b>Random Forest</b> memiliki performa terbaik dibanding dengan model lainnya. 
+<br>
+Dari confusion matrix yang diperoleh dengan model random forest, diketahui terdapat 893 dari 2100 customer yang tepat diprediksi akan melakukan default payment. 
+Jika diasumsikan akan diberikan treatment khusus pada customer yang diprediksi akan gagal bayar sehingga customer tersebut berhasil bayar pada bulan depannya, maka dapat diperoleh penurunan Default Payment Rate dari 22% menjadi 17%.<br>
+![](https://github.com/iqbalmudzakky/final_project/blob/main/bootcamp_notes/Screenshot%202023-05-02%20081611.png)
+<br>
+
+### Insight
+* Customer dengan range usia 25-39 tahun dengan background pendidikan sarjana dan berstatus single cenderung melakukan default payment
+* Limit kredit, status pembayaran, dan total tagihan bulan September memiliki pengaruh pada status payment default customer pada bulan selanjutnya
+
+## Business Recommendation
+* Bank dapat menggunakan karakteristik customer terutama limit kredit, dan status pembayaran dan total tagihan bulan September / bulan terakhir ini sebagai pertimbangan utama dalam menentukan prioritas customer yang akan diberikan treatment khusus untuk menghindari default payment.
+* Memberikan treatment khusus kepada customer yang diprediksi akan melakukan default payment tentu akan membutuhkan cost yang tidak sedikit, sehingga bank perlu untuk memberikan batasan dan menentukan customer mana yang diprioritaskan untuk mendapatkan treatment. Hal ini dapat diatasi dengan membuat model baru untuk melakukan sistem scoring kepada customer sehingga lebih mudah untuk menentukan customer prioritas.
+* Untuk membuat model yang lebih robust dan dapat digunakan dalam jangka panjang, sebaiknya perlu dilakukan kembali pemilihan feature yang lebih general dan dapat merepresentasikan customer lebih baik, seperti income, total aset, dsb.
