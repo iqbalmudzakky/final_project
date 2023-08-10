@@ -1,7 +1,7 @@
 <p align="center"><img src="https://github.com/iqbalmudzakky/final_project/blob/main/bootcamp_notes/Bank-header.png" width=50% height=50%></p>
 <h2> EXPLORATORY DATA ANAYSIS</h2><br>
 by: Data Magician Team<br>
-Dataset : data train from [[source]](https://www.kaggle.com/datasets/reverie5/av-janata-hack-payment-default-prediction)
+Dataset : <a href="https://www.kaggle.com/datasets/reverie5/av-janata-hack-payment-default-prediction">AV Janata Hack- Payment Default Prediction
 
 ### Introduction :
 Bank Taiwan nasional/national Taiwan bank (NTB) merupakan bank terkemuka di Asia. Bank ini menyediakan kemudahan dalam bertransaksi berupa debit card dan credit . Namun bank ini mempunyai sebuah masalah resiko credit yang perlu kami atasi. <br>
